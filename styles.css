@@ -1,0 +1,563 @@
+
+/* revome default settings*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+
+/* header  section ---nav bar---- */
+.top-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:black;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    background:black;
+    align-items:center;
+}
+
+.nav-bar{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-bar > li{
+    padding:0 12px;
+}
+
+.nav-bar > li:not(.drop-down-container) a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    font-size:1rem;
+    padding:15px;
+    display:block;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.nav-bar > li:hover a{
+     color:black
+}
+
+.nav-bar > li:hover{
+     background:lightgray;
+}
+
+
+/* --------drop down menu--------- */
+.drop-down-container{
+position:relative;
+}
+
+.drop-down-container:hover .drop-down,
+.drop-down-container:focus-within .drop-down {
+    display: flex;
+}
+
+
+.drop-down-btn{
+background:transparent;
+color:white;
+border:none;
+font-size:1rem;
+padding:15px;
+text-transform: uppercase;
+transition: background 0.4s;
+}
+
+
+.drop-down{
+    list-style:none;
+    background:white;
+    flex-flow:column;
+    display:none;
+    position:absolute;
+    left:0;
+    z-index:10;
+    transition: background 0.4s;
+}
+
+
+.drop-down li{
+padding:15px 30px;
+}
+
+
+.drop-down li:hover{
+    background: lightgray;
+}
+
+.drop-down-container:hover 
+.drop-down-btn{
+    background: lightgray;
+    color:black;
+}
+
+.drop-down a{
+    text-decoration:none;
+    font-size:1rem;   
+    padding:10px;
+    color:black;
+}
+
+
+
+/* ----------search bar -------- */
+.search-bar{
+    color:white;
+    padding:20px 15px;
+    display:block;
+}
+
+.search-icon:hover{
+    background:red
+}
+
+
+
+/* ---------main content page ------- */
+
+/* hero section */
+
+ .hero-section, .hero{
+    position:relative;
+    top:0;
+}
+
+.hero > img{
+    display:block;
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+} 
+
+
+.hero > figcaption{
+    position:absolute;
+
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    text-align: center;
+}
+
+
+
+
+/* ---band section */
+
+.band-member-container{
+    margin:100px auto;
+    background:white;
+}
+
+
+.band-member-container header{
+    text-align:center;
+}
+
+.band-member-container header > h2{
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    margin:20px 0;
+    letter-spacing:10px
+}
+
+.band-member-container header > p{
+    font-size:clamp(0.895rem, 1vw, 1.5rem);
+    margin:20px 0;
+    color:gray;
+    font-style:italic
+}
+
+.band-member-container > p{
+    font-size:1rem;
+    margin:0 auto;
+    max-width:94ch;
+    width:90%;
+    line-height: 1.6;
+    text-align:justify;
+}
+
+
+/* band memeber images  */
+
+.memberCard-container{
+    display:flex;
+    justify-content:space-around;
+    margin:70px auto;
+    width:90%;
+    max-width:94ch;
+}
+
+
+.memberCard-container figcaption{
+    margin-bottom:20px;
+    text-align:center
+
+}
+
+.memberCard-container img{
+    max-width:170px;
+    width:100%;
+    border-radius:5px
+}
+
+
+
+/* ------tour section------ */
+.tour-date-container{
+    background:black;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:50px;
+    padding-bottom:130px;
+}
+
+
+.tour-date-container > header{
+    margin-top:50px;
+    text-align:center;
+}
+
+.tour-date-container > header h2{
+    font-size:2rem;
+    letter-spacing:5px;
+    color:white;
+}
+
+.tour-date-container > header p{
+    font-size:1rem;
+    color:gray;
+    margin-top:30px;
+}
+
+.booking-information{
+    background:white;
+    max-width:900px;
+    width:100%;
+    margin-top:40px;
+}
+
+.booking-information > div{
+   border-bottom:1px solid lightgray;
+    padding:15px
+}
+
+.month{
+    color:gray;
+}
+
+.sold-out{
+    margin:0 20px;
+    background:orangered;
+    padding:5px 10px;
+    color:white;
+}
+
+.num{
+    background:black;
+    color:white;
+    display:inline-block;
+    border-radius:25px;
+    width:25px;
+    height:25px;
+    text-align:center;
+    align-content:center;
+    float:right;
+    margin-right:20px
+}
+
+
+/* ---cities -ticket buy------ */
+
+.ticket-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:40px;
+    max-width:900px;
+    width:100%;
+    gap:20px;
+}
+
+.city{
+    background:white;
+}
+
+.city img{
+    display:block;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.city >div{
+    padding:20px
+}
+
+.city h3{
+    margin-bottom:20px
+}
+
+.city time{
+    color:gray
+}
+
+.city p{
+    margin-top:20px;
+    line-height:1.6;
+    font-weight:500
+}
+
+
+.city button{
+    margin-top:20px;
+    padding:12px 20px;
+    background:black;
+    color:white;
+    font-size:clamp(1rem, 1.1vw, 1.2rem);
+    border:1px solid lightgray;
+    transition: background  0.4s
+}
+
+.city button:hover{
+    background-color: lightgray;
+    color:black;  
+}
+
+.city button:focus{
+    outline:1px solid black;
+    outline-offset:2px;
+}
+
+/* ----contact---- */
+
+.contact-container{
+margin-top:50px;
+padding-top:50px;
+display:flex;
+align-items: center;
+justify-content:center;
+flex-flow:column;
+}
+
+.contact-container h2{
+    font-size:2rem;
+    letter-spacing:5px;
+    text-transform: uppercase;
+    font-family:Helvetica, sans-serif;
+}
+
+.contact-container > header p{
+    text-align: center;
+    margin-top:15px;
+    color:gray
+}
+
+.address-container{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.address-container > address, .address-container > form{
+    padding:10px 50px;
+    margin:50px;
+}
+
+address >p{
+    font-size:1.3rem;
+    margin-top:7px
+}
+
+
+.input-field{
+    display:flex;
+    gap:10px;
+}
+
+.name, .email{
+    padding:15px 30px;
+    border:1px solid lightgray
+}
+
+textarea{
+    width:100%;
+    padding:10px 10px;
+    margin-top:20px;
+    border:1px solid lightgray
+}
+
+
+.send{
+    float:right;
+    margin-top:20px;
+    color:white;
+    background:black;
+    padding:10px 20px;
+    font-size:1.2rem;
+    text-transform: uppercase;
+    transition:background 0.4s;
+    border:none;
+}
+
+.send:hover{
+    color:black;
+    background:lightgray;
+}
+
+
+
+
+/*----- map location----- */
+
+.map-container{
+    margin-top:30px
+}
+
+
+.map-container img{
+    width:100%
+}
+
+
+
+/* ------fo0ter ------*/
+
+footer{
+    height:30vh;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a{
+    color:gray;
+    margin:0 1px;
+    transition: color 0.4s
+}
+
+footer a:hover{
+    color:lightgray;
+}
+
+footer p{
+    margin-top:15px;
+    color:gray
+}
+
+
+
+/* tablet */
+@media screen and (max-width:768px){
+    /* tour section */
+    .tour-date-container{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+
+    /* sour section */
+
+.booking-information > div{
+    padding:10px
+}
+
+.sold-out{
+    padding:3px 10px;
+    font-size:0.989rem
+
+}
+
+
+
+    /* contact */
+   
+    .address-container{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+    }
+    
+.address-container > address, .address-container > form{
+    padding:10px;
+    margin:10px;
+}
+
+.name, .email{
+    padding:15px 10px;
+}
+
+address >p{
+    font-size:1rem;
+}
+
+}
+
+
+/* mobile view  */
+@media screen and (max-width:425px){
+
+nav{
+       flex-direction: column; 
+}
+
+.nav-bar{
+    flex-direction: column;
+}
+
+    /* band memeber image section*/
+    .memberCard-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .memberCard-container figure{
+          margin-top:25px
+    }
+
+ .memberCard-container img{
+        max-width:100%
+ }
+
+
+ /* ticket city section */
+ .ticket-container{
+    flex-direction: column;
+ }
+
+
+
+ /* contact */
+   .input-field{
+    flex-direction: column;
+   }
+    .name, .email{
+        width:100%
+    }
+
+    
+/* footer */
+
+    footer a{
+        font-size:0.8rem
+    }
+}
